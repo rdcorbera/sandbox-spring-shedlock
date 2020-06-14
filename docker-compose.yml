@@ -1,0 +1,25 @@
+version: '3.2'
+services:
+  database:
+    image: 'mysql:5.7'
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+  service_1:
+    build:
+      context: ./
+  service_2:
+    build:
+      context: ./
+  service_3:
+    build:
+      context: ./
+  service_4:
+    build:
+      context: ./
+  service_5:
+    build:
+      context: ./
